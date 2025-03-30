@@ -5,4 +5,5 @@ body {
 }
 span#testCheck {
     background-color: antiquewhite;
+    font-size: 200%;
 }

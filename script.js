@@ -1,11 +1,12 @@
 function testFunc(){
-    testCheck.hidden = !testCheck.hidden
-    testCheck.textContent=phraseFeatures(getCriminal(allFeatures,currentFeatures))
+    testCheck.textContent="check good for now"
+    delayedMessage(testCheck)
+    //OneByOne(phraseFeatures(getCriminal(allFeatures,currentFeatures)),testCheck)
     return None
 }
 function randint(max) {
     return Math.floor(Math.random() * max);
-  }
+}
 
 const face = ["normal","round"]
 const eyes = ["angry","sad"]
@@ -44,6 +45,13 @@ function phraseFeatures(features) {
     return phrase
 }
 
+function setOutput(outputfield,outputContent) {
+    outputfield.textContent = outputContent;
+  }
+  
+  function delayedMessage(testCheck) {
+    setTimeout(setOutput, 2 * 1000, testCheck,"yaay");
+  }
 
 /*
 for (i of tab) {
