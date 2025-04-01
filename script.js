@@ -1,9 +1,7 @@
 function testFunc(){
     testCheck.textContent="check good for now"
-    delayedMessage(testCheck)
-    //OneByOne(phraseFeatures(getCriminal(allFeatures,currentFeatures)),testCheck)
-    return None
-}
+    OneByOne(phraseFeatures(getCriminal(allFeatures,currentFeatures)),testCheck)
+}   
 function randint(max) {
     return Math.floor(Math.random() * max);
 }
@@ -41,17 +39,31 @@ function getCriminal(allFeatures,currentFeatures){
 }
 
 function phraseFeatures(features) {
-    phrase = `He had a ${features[0]} face, ${features[1]} eyes and ${features[2]} hair. I think he had a ${features[3]} mouth${features[4]}${features[5]}`
+    phrase = `He had a ${features[0]} face, ${features[1]} eyes and ${features[2]} hair. I think he had a ${features[3]} mouth${features[4]}${features[5]}.`
     return phrase
 }
 
 function setOutput(outputfield,outputContent) {
     outputfield.textContent = outputContent;
   }
-  
-  function delayedMessage(testCheck) {
-    setTimeout(setOutput, 2 * 1000, testCheck,"yaay");
-  }
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function OneByOne(output,string) {
+    let result = '';
+    for (let i of output) {
+        result += i;
+        await sleep(30)
+        string.textContent = result
+        if (i == ",") {
+            await sleep(300)
+        }
+        if (i == ".") {
+            await sleep(500)
+        }
+    }
+}
 
 /*
 for (i of tab) {
