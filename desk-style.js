@@ -1,6 +1,6 @@
 function testFunc(){
     testCheck.textContent="check good for now"
-    OneByOne(phraseFeatures(getCriminal(allFeatures,currentFeatures)),testCheck)
+    printOneByOne(phraseFeatures(getCriminal(allFeatures,currentFeatures)),testCheck)
 }   
 function randint(max) {
     return Math.floor(Math.random() * max);
@@ -50,7 +50,7 @@ function setOutput(outputfield,outputContent) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function OneByOne(output,string) {
+async function printOneByOne(output,string) {
     let result = '';
     for (let i of output) {
         result += i;
