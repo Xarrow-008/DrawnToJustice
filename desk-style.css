@@ -3,20 +3,34 @@ body {
     background-repeat: no-repeat;
     background-size: 1600px 960px;
 }
+#test {
+    position: absolute;
+    z-index: 10;
+    font-size: 3em;
+    top: 100px;
+}
 button#done {
     font-size: 2em;
     position: absolute;
     left: 1453px;
     top: 715px;
     background-color: greenyellow;
+    z-index: 10;
 }
 img#witnessImage {
     position: absolute;
     left: 500px;
-    top: 100px;
-    width: 50%;
-    height: 50%;
+    top: 60px;
+    width: 30%;
     z-index: 1;
+}
+img#table {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 85.2%;
+    z-index: 2;
+
 }
 
 span#testCheck {
@@ -24,5 +38,5 @@ span#testCheck {
     background-color: antiquewhite;
     color: black;
     font-size: 200%;
-    z-index: 2;
+    z-index: 9;
 }
