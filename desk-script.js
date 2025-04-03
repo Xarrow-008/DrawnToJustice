@@ -1,11 +1,11 @@
 function testFunc(){
-    testCheck.textContent="check good for now"
+    setWitness(witnessImage,witnessList)
     printOneByOne(phraseFeatures(getCriminal(allFeatures,currentFeatures)),testCheck)
 }   
 function randint(max) {
     return Math.floor(Math.random() * max);
 }
-
+const witnessList = ["big_dude.png","farmer.png","grandma.png","kid.png"]
 const face = ["normal","round"]
 const eyes = ["angry","sad"]
 const hair = ["spiky","very short","no"]
@@ -65,8 +65,7 @@ async function printOneByOne(output,string) {
     }
 }
 
-/*
-for (i of tab) {
-    console.log(tab[randint(3)])
-}*/
-
+function setWitness(image,witnessList) {
+    image.src = `image/witnesses/${witnessList[randint(witnessList.length)]}`
+    witnessImage.hidden = false
+}

@@ -1,16 +1,23 @@
 body {
     background-image:url("image/background.png") ;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: 1600px 960px;
 }
 span#testCheck {
     background-color: antiquewhite;
     font-size: 200%;
+    z-index: 2;
 }   
 button#done {
-    font-size: 4em;
-    position: relative;
-    top: 73vh;
-    left: 87.1vw;
+    font-size: 2em;
+    position: absolute;
+    left: 1453px;
+    top: 715px;
     background-color: greenyellow;
+}
+img#witnessImage {
+    position: absolute;
+    left: 500px;
+    size:80%;
+    z-index: 1;
 }
