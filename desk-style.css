@@ -3,11 +3,6 @@ body {
     background-repeat: no-repeat;
     background-size: 1600px 960px;
 }
-span#testCheck {
-    background-color: antiquewhite;
-    font-size: 200%;
-    z-index: 2;
-}   
 button#done {
     font-size: 2em;
     position: absolute;
@@ -18,6 +13,16 @@ button#done {
 img#witnessImage {
     position: absolute;
     left: 500px;
-    size:80%;
+    top: 100px;
+    width: 50%;
+    height: 50%;
     z-index: 1;
+}
+
+span#testCheck {
+    position: absolute;
+    background-color: antiquewhite;
+    color: black;
+    font-size: 200%;
+    z-index: 2;
 }
