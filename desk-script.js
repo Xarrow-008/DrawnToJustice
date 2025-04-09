@@ -1,4 +1,5 @@
 function testFunc(){
+    blank(document.getElementById("drawingScreen").getContext("2d"))
     setWitness(witnessImage,witnessList)
     printOneByOne(phraseFeatures(getCriminal(allFeatures,currentFeatures)),testCheck)
 }   
@@ -69,26 +70,33 @@ function setWitness(image,witnessList) {
     image.src = `image/witnesses/${witnessList[randint(witnessList.length)]}`
     witnessImage.hidden = false
 }
+
+
+function blank(ctx) {
+    ctx.reset()
+    ctx.fillStyle = "rgb(0, 225, 255)";
+    ctx.fillRect(0, 0, 500, 1000);
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.stroke()
+
+}
 function draw() {
     const canvas = document.getElementById("drawingScreen");
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
-        ctx.fillStyle = "rgb(255,255,255)"
-        ctx.fillRect(25, 25, 300, 150,)
-        ctx.fillStyle = "rgb(0,0,0)"
+        blank(ctx)
+        ctx.beginPath();
+        ctx.moveTo(25,25);
         drawOnMouse(ctx,canvas);
     }
 }
 
 function drawOnMouse(ctx,canvas) {
-    let previousX = 0
-    let previousY = 0
     document.addEventListener(
         'mousemove',
         function(e) {
-            console.log(canvas.getBoundingClientRect())
-            ctx.beginPath();
             ctx.lineTo(e.clientX,e.clientY)
+            ctx.stroke()
         }
     )
 }

@@ -1,7 +1,7 @@
 body {
     background-image:url("image/background.png") ;
     background-repeat: no-repeat;
-    background-size: 1600px 960px;
+    background-size: 1440px 864px;
 }
 #test {
     position: absolute;
@@ -12,8 +12,8 @@ body {
 button#done {
     font-size: 2em;
     position: absolute;
-    left: 1453px;
-    top: 715px;
+    left: 1300px;
+    top: 640px;
     background-color: greenyellow;
     z-index: 10;
 }
@@ -28,7 +28,7 @@ img#table {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 1600px;
+    width: 1440px;
     z-index: 2;
 
 }
@@ -42,7 +42,10 @@ span#testCheck {
 }
 canvas {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 899px;
+    top: 406px;
+    width: 491px;
+    height: 275px;
+    z-index: 9;
 
 }
